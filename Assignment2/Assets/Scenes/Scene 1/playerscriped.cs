@@ -11,18 +11,16 @@ public class playerscriped : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    
         public float speed = 10.0f;
 
         void Update()
     {
-        fload h = Input.GetAxis("Horizontal");
-        fload v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(h, 0.0f, v);
+        Vector2 movement = new Vector2(h, v);
         transform.Translate(movement * speed * Time.deltaTime);
     }
-        
-    }
+       
 }
