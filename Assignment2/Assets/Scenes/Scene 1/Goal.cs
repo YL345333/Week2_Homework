@@ -15,12 +15,16 @@ public class Goal : MonoBehaviour
     {
 
     }
+    public GameObject WinUI;
     private void OnTriggerEnter2D(Collider2D other)
     { 
+        Debug.Log("Player entered Goal trigger: " + other.name);
+
        if (other.CompareTag("Player"))
         
         {
            Debug.Log("You Win!");
+            WinUI.SetActive(true);
         }
      }
  }
